@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task runJavaClass(type: JavaExec) {
+    main = 'Calculator.java'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
